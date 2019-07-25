@@ -216,6 +216,7 @@ class TriangleGrid(object):
 
     def clear(self):
         self.set_all_cells(RGB( 0, 0, 0))
+
         self.go()
 
     def go(self):
