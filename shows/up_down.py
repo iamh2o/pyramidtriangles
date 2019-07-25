@@ -18,11 +18,13 @@ class UpDown(ShowBase):
                 for i in self.tri_grid.get_up_cells():
                     print("Up", i.get_id())
                     self.tri_grid.set_cell_by_cellid(i.get_id(), RGB( 0, 255, 255))
+
             else:
                 print('down')
                 for i in self.tri_grid.get_down_cells():
                     print("down", i.get_id())
                     self.tri_grid.set_cell_by_cellid(i.get_id(), RGB( 255, 0, 200))
+
 
             if a == "up":
                 a = "down"

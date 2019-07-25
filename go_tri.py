@@ -325,6 +325,7 @@ if __name__ == '__main__':
 
         model = SimulatorModel(sim_host, port=sim_port, model_json='./data/pixel_map.json')
         triangle_grid = triangle_grid.make_tri(model, 11) #Our panels will only have 11 rows
+
     else:
         logger.info("Starting SACN")
         from model.sacn_model import sACN

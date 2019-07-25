@@ -4,6 +4,7 @@ Color
 Color class that allows you to initialize a color in any of HSV, HSL, HSI, RGB, Hex color spaces.  Once initialized, the corresponding RGBW values are calculated and you may modify the object in RGB or HSV color spaces( ie: by re-setting any component of HSV or RGB (ie, just resetting the R value) and all RGB/HSV/RGBW values will be recalculated.  As of now, you can not work in RGBW directly as we have not written the conversions from RGBW back to one of the standard color spaces. (annoying, but so it goes).
 
 
+
 The main goal of this class is to translate various color spaces into RGBW for use in RGBW pixels.
 NOTE! this package will not control 3 channel RGB LEDs properly.
 
@@ -17,6 +18,7 @@ HSL/HSI values range from 0-360 for H, 0-1 for S/[L|I]
     >>> red   = RGB(255, 0 ,0)  (RGBW = 255,0,0,0)
     >>> green = HSV(0.33, 1.0, 1.0) (RGBW = 5, 254, 0, 0)
     >>> fuschia = RGB(180, 48, 229) (RGBW = 130, 0 , 182, 47)
+
 
 Colors may also be specified as hexadecimal string:
 
@@ -311,6 +313,7 @@ def HSI(h,s,i):
     return RGB( hsi2rgb(h,s,i) )
 
 
+
 def RGB(r,g,b):
     "Create a new RGB color"
     t = (r,g,b)
@@ -328,6 +331,7 @@ def HSL(h,s,l):
     (h,s,v) = hsl2hsv(t[0], t[1], t[2])
     print(h,s,v)
     return Color((constrain(h/360.0,0.0,1.0),s,v))
+
 
 def Hex(value):
     "Create a new Color from a hex string"
@@ -412,6 +416,7 @@ class Color(object):
         v = clamp(val, 0.0, 1.0) 
         self.hsv_t[2] = round(v, 8)
 
+        
 
     """                                                                                                                                                                      
     Properties representing individual RGB components                                                                                                                        
