@@ -108,19 +108,19 @@ class TriangleGrid(object):
 
                 tco = None #triagnel cell object
                 if up_down == 'up':
-                    tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [top_pixel, top_pixel-1, top_pixel-2, top_pixel-3, top_pixel-4, top_pixel-5])
+                    tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [top_pixel, top_pixel-1, top_pixel-2, top_pixel-3, top_pixel-4, top_pixel-5, top_pixel-6, top_pixel-7])
                     self._cells.append(tco)
-                    top_pixel -= 6
+                    top_pixel -= 8
                     up_down = 'down'
                 else:
                     if curr_row >1:
-                        tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [btm_pixel, btm_pixel+1, btm_pixel+2, btm_pixel+3, btm_pixel+4, btm_pixel+5])
+                        tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [btm_pixel, btm_pixel+1, btm_pixel+2, btm_pixel+3, btm_pixel+4, btm_pixel+5, btm_pixel+6, btm_pixel+7])
                         self._cells.append(tco)
-                        btm_pixel += 6
+                        btm_pixel += 8
                     else:
-                        tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [btm_pixel, btm_pixel-1, btm_pixel-2, btm_pixel-3, btm_pixel-4, btm_pixel-5])
+                        tco = TriangleCell(cell_id,  curr_row, up_down, top, l_corner, r_corner, is_l_edge, is_r_edge, is_btm_edge, row_pos, [btm_pixel, btm_pixel-1, btm_pixel-2, btm_pixel-3, btm_pixel-4, btm_pixel-5, btm_pixel-6, btm_pixel-7])
                         self._cells.append(tco)
-                        btm_pixel -= 6
+                        btm_pixel -= 8
                     up_down = 'up' 
 
                 #Add Cell To Triangle Grid!
@@ -145,9 +145,9 @@ class TriangleGrid(object):
             curr_row += 1
             btm_pixel -= 2 #(curr_row*6)+7
             if curr_row > 1:
-                btm_pixel -= (curr_row*6)+9+9
+                btm_pixel -= (curr_row*8)+9
 
-            top_pixel -= (curr_row*6)+9
+            top_pixel -= (curr_row*8)
 
     def go(self):
         self._model.go()

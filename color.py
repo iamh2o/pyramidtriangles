@@ -310,6 +310,7 @@ def HSI(h,s,i):
     assert is_hsi_hsl_tuple(t)
     return RGB( hsi2rgb(h,s,i) )
 
+
 def RGB(r,g,b):
     "Create a new RGB color"
     t = (r,g,b)
@@ -410,8 +411,6 @@ class Color(object):
     def v(self, val):
         v = clamp(val, 0.0, 1.0) 
         self.hsv_t[2] = round(v, 8)
-
-        
 
 
     """                                                                                                                                                                      

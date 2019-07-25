@@ -26,7 +26,7 @@ export PATH="$(brew --prefix python)/libexec/bin:${PATH}"
 curl -fsSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
 # Install dependencies
-poetry install
+poetry install  (if using a ve, source ve/bin/activate first)
 ```
 
 * [Processing 2.2.1+](https://www.processing.org) (for simulator only)
@@ -42,11 +42,11 @@ Processing, and run it.
 
 To start the lighting software talking to the simulator:
 
-    poetry run python go_tri.py --simulator
+    poetry run python go_tri.py --simulator   (or if you are running a ve, python go_tri.py --simulator)
 
 You can also specify which show to run by using the name of the show:
 
-    poetry run python go_tri.py --simulator UpDown
+    poetry run python go_tri.py --simulator UpDown (or if you are running a ve, python go_tri.py --simulator UpDown)
 
 You can also choose which show is running through the web interface:
 
