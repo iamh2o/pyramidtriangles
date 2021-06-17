@@ -1,8 +1,8 @@
-# The HexBahPyr Color Space Converter: RGB / HSL / HSI / HEX (2) to RGBW 
+# The HexBahPyr Color Space Converter: RGB / HSL / HSI / HEX (2) to --> RGBW <-- 
 
 ## A piece of emergent tooling
 
-> The product of 7 years of LED projects, which solves a simple problem- converting commonly used color space representations to be able to tbe translated to RGBW for use with RGBW LEDs (you won't believe the pastels RGBW makes possible).
+> The product of 7 years of LED projects, which solves a simple problem- converting commonly used color space representations to be able to tbe translated to RGBW for use with RGBW LEDs (you won't believe the pastels RGBW makes possible).  For all your RGB to RGBW conversion and mapping needs.
 
 ## Authors
 
