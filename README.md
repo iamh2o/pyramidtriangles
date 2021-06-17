@@ -1,4 +1,4 @@
-# The HexBahPyr Color Space Conver: RGB / HSL / HSI / HEX (2) to RGBW 
+# The HexBahPyr Color Space Converter: RGB / HSL / HSI / HEX (2) to RGBW 
 
 ## A piece of emergent tooling
 
